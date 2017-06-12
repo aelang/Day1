@@ -4,15 +4,6 @@ import codecs
 
 stopwords = set(codecs.open('FrenchStopwords.txt', encoding='utf8').readlines())
 
-def tokenize_words(line):
-    withoutspaces = line.strip().lower()
-    tokenized = withoutspaces.split(' ')
-    outputwords = []
-    for word in tokenized:
-        if word != '' and word not in stopwords:
-            outputwords.append(word)
-
-    return outputwords
 
 
 countedwords = {}
